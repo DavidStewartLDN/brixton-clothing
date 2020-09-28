@@ -8,7 +8,7 @@ import HomePage from './pages/homepage/homepage.component';
 
 
 
-const HatsPage = () => (
+const HatsPage = (props) => (
   <div>
     <h1> HATS PAGE </h1>
   </div>
@@ -20,7 +20,7 @@ ReactDOM.render(
   <Router>
     <Switch>
       <Route exact path='/' component={HomePage} />
-      <Route path='/hats' component={HatsPage} />
+      <Route path='shop/hats' component={HatsPage} />
     </Switch>
   </Router>
   </React.StrictMode>,
