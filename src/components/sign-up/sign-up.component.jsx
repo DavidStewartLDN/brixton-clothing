@@ -5,6 +5,7 @@ import FormInput from '../form-input/form-input.component';
 import { auth, createUserProfileDocument } from '../../fireabse/firebase.utils';
 
 import './sign-up.styles.scss';
+import SignIn from '../sign-in/sign-in.component';
 
 class SignUp extends React.Component {
   constructor(){
@@ -34,11 +35,37 @@ class SignUp extends React.Component {
             onChange={this.handleChange}
             label='Display Name'
             required
-          >
-          </FormInput>
+          />
+          <FormInput
+            type='email'
+            name='email'
+            value={email}
+            onChange={this.handleChange}
+            label='Email'
+            required
+          />
+          <FormInput
+            type='password'
+            name='password'
+            value={password}
+            onChange={this.handleChange}
+            label='Password'
+            required
+          />
+          <FormInput
+            type='password'
+            name='confirmPassword'
+            value={confirmPassword}
+            onChange={this.handleChange}
+            label='Confirm password'
+            required
+          />
+          <CustomButton type='submit'>SIGN UP</CustomButton>
         </form>
       </div>
     )
   }
 
 }
+
+export default SignUp
