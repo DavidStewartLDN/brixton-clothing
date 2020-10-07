@@ -13,8 +13,3 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return state;
   }
 }
-
-{
-  type: ,
-  payload: any
-}
